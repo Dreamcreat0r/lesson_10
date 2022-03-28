@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>40792e78-2dfc-487d-9e27-3d0db7f6621b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>lesson_10.py</StartupFile>
+    <StartupFile>02_groundhog_day.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

@@ -9,7 +9,8 @@
 # Операндны - целые числа. Операции - арифметические, целочисленное деление и остаток от деления.
 #
 # Нужно вычислить все операции и найти сумму их результата.
-
+import os
+import os.path
 
 def calc(line):
     # print(f'Read line {line}', flush=True)
@@ -33,16 +34,21 @@ def calc(line):
     return value
 
 
+path = os.path.abspath(__file__)
+splitted = os.path.split(path)
+path = os.path.join(splitted[0], 'calc.txt')
+
 total = 0
-with open('calc.txt', 'r') as ff:
+with open(path, 'r') as ff:
     for line in ff:
         line = line[:-1]
         try:
             total += calc(line)
         except ValueError as exc:
             if 'unpack' in exc.args[0]:
-                print(f'Не хватает операндов {exc} в строке {line}')
+                print(f'Не хватает операндов {exc}', end = '')
             else:
-                print(f'Не могу преобразовать к целому {exc} в строке {line}')
+                print(f'Не могу преобразовать к целому {exc} в строке {line}', end = '')
+            print(f' в строке:   {line}')
 
 print(f'Total {total}')
