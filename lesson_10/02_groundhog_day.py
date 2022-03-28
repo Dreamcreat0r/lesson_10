@@ -31,7 +31,7 @@ file = os.path.abspath(__file__)
 splitted = os.path.split(file)
 file = os.path.join(splitted[0], 'one_day_log.txt')
 
-# создаем все нужные виды ошибок к одной переменной для хранения информации об ошибке, которая сохраянется при ее вызове
+# создаем все нужные виды ошибок с одной переменной для хранения информации об ошибке, которая сохраянется при ее вызове
 class IamGodError(Exception):
     def __init__(self, input_data = None):
         self.message = 'Я Бог!'
